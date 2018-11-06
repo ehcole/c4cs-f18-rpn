@@ -1,7 +1,9 @@
 language: python
 python:
   - "3.5"
+before_script:
+  - pip install python-coveralls
 script:
-  python3 -m unittest --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
+  python3 -m unittest
 after_success:
   - coveralls
