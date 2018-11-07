@@ -1,2 +1,7 @@
 [run]
 branch = True
+[report]
+omit =
+     */python?.?/*
+     */site-packages/nose/*
+     *__init__*

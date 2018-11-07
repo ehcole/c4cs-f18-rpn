@@ -4,7 +4,9 @@ python:
 before_script:
   - pip install coveralls
   - pip install colorama
+  - pip install nose
 script:
   python3 -m unittest
+  nosetests -- with-coverage
 after_success:
   - coveralls
