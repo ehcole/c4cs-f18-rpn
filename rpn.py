@@ -32,8 +32,8 @@ def calculate(myarg):
             token = int(token)
             stack.append(token)
         except ValueError:
-            if token == "q":
-                exit(0)
+            #if token == "q":
+            #    exit(0)
             function = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
