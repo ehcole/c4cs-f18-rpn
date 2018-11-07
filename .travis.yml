@@ -6,7 +6,7 @@ before_script:
   - pip install colorama
   - pip install nose
 script:
-  - python3 -m unittest
+  - coverage run test_rpn.py
   - nosetests --with-coverage
 after_success:
   - coveralls
