@@ -1,5 +1,5 @@
 import unittest
-
+import os
 import rpn
 
 class TestBasics(unittest.TestCase):
@@ -19,3 +19,5 @@ class TestBasics(unittest.TestCase):
         result = rpn.calculate("2 3 ^")
         self.assertEqual(8, result)
    
+if __name__ == "__main__":
+    os.system("python3 -m unittest")
