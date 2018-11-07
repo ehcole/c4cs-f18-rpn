@@ -3,6 +3,7 @@ python:
   - "3.5"
 before_script:
   - pip install coveralls
+  - pip install colorama
 script:
   python3 -m unittest
 after_success:
