@@ -14,6 +14,19 @@ operators = {
     }
 def calculate(myarg):
     stack = list()
+    userinput = str()
+    for token in myarg.split():
+        try:
+            num = int(token)
+        except:
+            userinput += colorama.Back.GREEN + token + colorama.Style.RESET_ALL + " "
+        else:
+            if num < 0:
+                userinput += colorama.Style.BRIGHT + colorama.Fore.RED + token + colorama.Style.RESET_ALL + " "
+            else:
+                userinput += token + " "
+    print("user input:", userinput)
+    print("Stack:")
     for token in myarg.split():
         try:
             token = int(token)
@@ -26,7 +39,7 @@ def calculate(myarg):
             arg1 = stack.pop()
             result = function(arg1, arg2)
             stack.append(result)
-#            stack.append('^')
+#            stack.append('^')c
         for item in stack:
             try:
                 num = int(item)
